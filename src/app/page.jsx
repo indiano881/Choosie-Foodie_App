@@ -66,21 +66,23 @@ const handleClick = () => {
       <h1>Chossie-Foodie-App</h1>
       <div className={styles.cardContainer}>
         <h3>{meal.strMeal}</h3>
-        <h4>{meal.strArea}</h4>
-        <h4>{meal.strCategory}</h4>
-        <Image src={meal.strMealThumb} 
+        <h4>Origin: {meal.strArea}</h4>
+        <h4>Category: {meal.strCategory}</h4>
+        <Image priority src={meal.strMealThumb} 
         alt={meal.strMeal} 
         width={400} 
-        height={400} 
+        height={400}
         />
         <h5>{meal.strInstructions}</h5>
-        {measureIngredientsArray.map((item, index)=> <h4 key={index}> {item.measure} {item.ingredient} </h4>)}
-
+        <div className={styles.containerIng}>
+        <h5>Ingredients:</h5>
+        {measureIngredientsArray.map((item, index)=> <h6 key={index}> {item.measure} {item.ingredient} </h6>)}
+        </div>
         
 
 
 
-        <button onClick={handleClick}>Another meal</button>
+        <button onClick={handleClick} className={styles.mealBtn}>Another meal</button>
       </div>
      
 
