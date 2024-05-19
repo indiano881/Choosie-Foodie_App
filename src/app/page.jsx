@@ -86,13 +86,16 @@ export default function Home() {
 
 Very important to handle the loading part 
 As beginner keep everything in one component 
-Image 
-When using an external URL, you must add it to domains or remotePatterns in next.config.js 
-cant nest a for loop in jsx
+
+When using an external URL, you must add it to domains or remotePatterns in next.config.js. Domains is deprecated but easier to use
+for loop did not work. tried also in a function
+logic: object....map method, intermidiate step is having an array(with objects inside)
 map method but MUST have array instead of an object
 smart way to convert object in array
 
 cool feature:
 icon picture
 experimenting with div with different names daa da1 da2
+
+Image-Ask Rob how to make responsive better
 */
