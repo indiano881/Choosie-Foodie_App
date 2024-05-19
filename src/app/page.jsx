@@ -29,16 +29,22 @@ if (!meal) {
 }
   return (
     <main>
-      <h4>{meal.strMeal}</h4>
-      <h4>{meal.strArea}</h4>
-      <h4>{meal.strCategory}</h4>
-      <Image src={meal.strMealThumb} 
-       alt={meal.strMeal} 
-       width={500} 
-       height={500} 
-      />
+      <h1>Chossie-Foodie-App</h1>
+      <div className={styles.cardContainer}>
+        <h4>{meal.strMeal}</h4>
+        <h4>{meal.strArea}</h4>
+        <h4>{meal.strCategory}</h4>
+        <Image src={meal.strMealThumb} 
+        alt={meal.strMeal} 
+        width={500} 
+        height={500} 
+        />
+        <h4>{meal.strInstructions}</h4>
+        <button>Another meal</button>
+      </div>
+     
 
-      <h4>{meal.strInstructions}</h4>
+      
     </main>
   );
 }
