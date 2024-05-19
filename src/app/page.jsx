@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
+import { Poppins } from "next/font/google";
+
 
 import {useState, useEffect} from "react"
 
