@@ -25,25 +25,57 @@ useEffect(()=>{
 },[])
 
 
-
-
 if (!meal) {
   return <main>What´s coming for dinner...</main>;
 }
+
+const measureIngredientsArray= [];
+
+
+const FillArray = (targetFood, targetArray) => {
+  for (let i = 1; i <= 20; i++) {
+    const measure = targetFood[`strMeasure${i}`];
+    const ingredient = targetFood[`strIngredient${i}`];
+    if (measure && ingredient) {
+      targetArray.push({ measure, ingredient });
+    }
+  }
+};
+
+FillArray(meal, measureIngredientsArray)
+console.log(measureIngredientsArray)
+
+
+
+
+
+const CleanArray = (targetArray) => {
+  return targetArray= []
+}
+
+const handleClick = () => {
+  GetMeal()
+  CleanArray(measureIngredientsArray)
+}
   return (
-    <main>
+    <main className={styles.main}>
       <h1>Chossie-Foodie-App</h1>
       <div className={styles.cardContainer}>
-        <h4>{meal.strMeal}</h4>
+        <h3>{meal.strMeal}</h3>
         <h4>{meal.strArea}</h4>
         <h4>{meal.strCategory}</h4>
         <Image src={meal.strMealThumb} 
         alt={meal.strMeal} 
-        width={500} 
-        height={500} 
+        width={400} 
+        height={400} 
         />
-        <h4>{meal.strInstructions}</h4>
-        <button onClick={()=> GetMeal()}>Another meal</button>
+        <h5>{meal.strInstructions}</h5>
+
+        
+
+
+
+        <button onClick={handleClick}>Another meal</button>
       </div>
      
 
@@ -57,4 +89,7 @@ Very important to handle the loading part
 As beginner keep everything in one component
 Image
 When using an external URL, you must add it to remotePatterns in next.config.js
+
+cant nest a for loop in jsx
+map method but MUST have array instead of an object
 */
