@@ -24,6 +24,9 @@ useEffect(()=>{
   
 },[])
 
+
+
+
 if (!meal) {
   return <main>What´s coming for dinner...</main>;
 }
@@ -40,7 +43,7 @@ if (!meal) {
         height={500} 
         />
         <h4>{meal.strInstructions}</h4>
-        <button>Another meal</button>
+        <button onClick={()=> GetMeal()}>Another meal</button>
       </div>
      
 
