@@ -32,7 +32,20 @@ if (!meal) {
       <h4>{meal.strMeal}</h4>
       <h4>{meal.strArea}</h4>
       <h4>{meal.strCategory}</h4>
+      <Image src={meal.strMealThumb} 
+       alt={meal.strMeal} 
+       width={500} 
+       height={500} 
+      />
+
       <h4>{meal.strInstructions}</h4>
     </main>
   );
 }
+/*
+
+Very important to handle the loading part
+As beginner keep everything in one component
+Image
+When using an external URL, you must add it to remotePatterns in next.config.js
+*/
