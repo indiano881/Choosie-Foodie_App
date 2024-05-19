@@ -64,10 +64,11 @@ export default function Home() {
           <h4>Category: {meal.strCategory}</h4>
         </da1>
         
-        <Image priority src={meal.strMealThumb} 
-        alt={meal.strMeal} 
-        width={400} 
-        height={400}
+        <Image priority={true} src={meal.strMealThumb} 
+        alt={meal.strMeal}
+        width={300}
+        height={300}
+        sizes="(max-width: 768px) 40vw, 50vw"
         />
 
         <h5>{meal.strInstructions}</h5>
@@ -86,7 +87,7 @@ export default function Home() {
 Very important to handle the loading part 
 As beginner keep everything in one component 
 Image 
-When using an external URL, you must add it to remotePatterns in next.config.js 
+When using an external URL, you must add it to domains or remotePatterns in next.config.js 
 cant nest a for loop in jsx
 map method but MUST have array instead of an object
 smart way to convert object in array
