@@ -59,9 +59,9 @@ export default function Home() {
       <daa className={styles.cardContainer}>
         <da1 className={styles.containerIntro}>
           <h3>{meal.strMeal}</h3>
-          <h5></h5>
-          <h5>Origin: {meal.strArea}</h5>
-          <h5>Category: {meal.strCategory}</h5>
+          <h5>{/*PLACEHOLDER QUICK STYLING */}</h5>
+          <h4>Origin: {meal.strArea}</h4>
+          <h4>Category: {meal.strCategory}</h4>
         </da1>
         
         <Image priority src={meal.strMealThumb} 

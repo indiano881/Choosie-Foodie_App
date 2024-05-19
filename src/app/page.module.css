@@ -15,7 +15,12 @@
     padding: 16px;
 }
 
+.containerIntro {
+    margin-bottom: 24px;
+}
+
 .mealBtn {
+    text-align: center;
     cursor: pointer;
     background-color: azure;
     border: 3px solid black;
@@ -23,8 +28,26 @@
     font-size: 16px;
     padding:8px;
     margin-top: 24px;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 .mealBtn:hover {
     background-color: rgb(7, 90, 47);
+    font-weight: bold;
+    color: azure;
+}
+
+@media screen and (min-width: 768px) {
+    .mealBtn {
+        cursor: pointer;
+        background-color: azure;
+        border: 3px solid black;
+        border-radius: 20px;
+        font-size: 16px;
+        padding:8px;
+        margin-top: 24px;
+        margin-left: 40%;
+        margin-right: 40%;
+    }
 }
