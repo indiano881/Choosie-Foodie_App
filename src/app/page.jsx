@@ -25,6 +25,8 @@ useEffect(()=>{
 },[])
 
 
+//PRESENTATION FROM HERE
+
 if (!meal) {
   return <main>What´s coming for dinner...</main>;
 }
@@ -70,6 +72,7 @@ const handleClick = () => {
         height={400} 
         />
         <h5>{meal.strInstructions}</h5>
+        {measureIngredientsArray.map((item, index)=> <h4 key={index}> {item.measure} {item.ingredient} </h4>)}
 
         
 
@@ -85,11 +88,11 @@ const handleClick = () => {
 }
 /*
 
-Very important to handle the loading part
-As beginner keep everything in one component
-Image
-When using an external URL, you must add it to remotePatterns in next.config.js
-
+Very important to handle the loading part 
+As beginner keep everything in one component 
+Image 
+When using an external URL, you must add it to remotePatterns in next.config.js 
 cant nest a for loop in jsx
 map method but MUST have array instead of an object
+smart way to convert object in array
 */
