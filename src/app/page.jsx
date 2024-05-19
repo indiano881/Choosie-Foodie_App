@@ -82,7 +82,7 @@ const handleClick = () => {
 
 
 
-        <button onClick={handleClick} className={styles.mealBtn}>Another meal</button>
+        <p onClick={handleClick} className={styles.mealBtn}>Another meal</p>
       </div>
      
 
